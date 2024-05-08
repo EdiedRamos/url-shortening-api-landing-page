@@ -1,4 +1,4 @@
-import React from "react";
+import "./StatisticsDetail.scss";
 
 interface StatisticsDetail {
   title: string;
@@ -8,10 +8,12 @@ interface StatisticsDetail {
 
 export const StatisticsDetail = ({ title, text, img }: StatisticsDetail) => {
   return (
-    <article>
-      <img src={img} alt="icon" />
-      <h3>{title}</h3>
-      <p>{text}</p>
+    <article className="statistics-detail statistics-detail__container">
+      <div className="statistics-detail__icon">
+        <img src={img} alt="icon" />
+      </div>
+      <h3 className="statistics-detail__title">{title}</h3>
+      <p className="statistics-detail__text">{text}</p>
     </article>
   );
 };
