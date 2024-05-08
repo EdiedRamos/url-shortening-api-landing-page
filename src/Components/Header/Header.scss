@@ -48,21 +48,26 @@
   }
 
   &__navbar {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: $grayish-violet;
+      font-weight: bold;
+      list-style: none;
+
+      li:hover {
+        cursor: pointer;
+        color: $cyan;
+      }
+    }
+
     &--mobile {
       width: 100%;
 
       ul {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
         color: white;
-        list-style: none;
-
-        li:hover {
-          cursor: pointer;
-          color: $cyan;
-        }
       }
     }
   }
@@ -93,12 +98,29 @@
       }
     }
 
+    &__group,
+    &__buttons-group {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &__buttons-group {
+      gap: 1rem;
+
+      button:nth-child(1) {
+        background-color: inherit;
+        color: $grayish-violet;
+        font-weight: bold;
+      }
+    }
+
     &__container {
       &--mobile {
         display: none;
       }
       &--desktop {
         display: flex;
+        justify-content: space-between;
       }
     }
   }

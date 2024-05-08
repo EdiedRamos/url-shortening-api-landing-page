@@ -14,6 +14,25 @@ export const Header = () => {
 
   return (
     <header className="header">
+      {/* desktop version */}
+      <div className="header__container--desktop container">
+        <div className="header__group">
+          <Logo />
+          <nav className="header__navbar header__navbar--desktop">
+            <ul>
+              {NAV_MOCK.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+        <div className="header__buttons-group">
+          <Button>Login</Button>
+          <Button>Sign Up</Button>
+        </div>
+      </div>
+
+      {/* mobile version */}
       <div className="header__controls--mobile container">
         <Logo />
         <div className="header__container--toggle">
@@ -22,27 +41,12 @@ export const Header = () => {
           </button>
         </div>
       </div>
-      {/* desktop version */}
-      <div className="header__container--desktop">
-        <nav>
-          <ul>
-            {NAV_MOCK.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </nav>
-        <div>
-          <Button>Login</Button>
-          <Button>Sign Up</Button>
-        </div>
-      </div>
-      {/* mobile version */}
       <div
         className={`header__container--mobile container ${
           showMenu ? "show" : "hide"
         }`}
       >
-        <nav className="header__navbar--mobile">
+        <nav className="header__navbar header__navbar--mobile">
           <ul>
             {NAV_MOCK.map((item) => (
               <li key={item}>{item}</li>
