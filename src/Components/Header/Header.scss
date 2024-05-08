@@ -1,6 +1,7 @@
 @import "@/Generals/Styles/Colors/colors";
 
 .header {
+  position: relative;
   padding-top: 2rem;
 
   &__controls {
@@ -22,8 +23,12 @@
   &__container {
     &--mobile {
       display: flex;
+      position: absolute;
+      left: 50%;
       flex-direction: column;
       align-items: center;
+      transform: translateX(-50%);
+      margin-top: 1rem;
       border-radius: 8px;
       background-color: $dark-violet;
       padding: 2rem 1rem;
