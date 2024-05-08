@@ -1,13 +1,27 @@
 import "./Header.scss";
 
+import { BurgerIcon, CloseIcon } from "@/Generals/Icons";
 import { Button, Logo } from "@/Components";
+
+import { useState } from "react";
 
 const NAV_MOCK = ["Features", "Pricing", "Resources"];
 
 export const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleShow = () => setShowMenu((prev) => !prev);
+
   return (
     <header className="header">
-      <Logo />
+      <div className="header__controls--mobile container">
+        <Logo />
+        <div className="header__container--toggle">
+          <button onClick={handleShow}>
+            {showMenu ? <CloseIcon /> : <BurgerIcon />}
+          </button>
+        </div>
+      </div>
       {/* desktop version */}
       <div className="header__container--desktop">
         <nav>
@@ -23,7 +37,11 @@ export const Header = () => {
         </div>
       </div>
       {/* mobile version */}
-      <div className="header__container--mobile container">
+      <div
+        className={`header__container--mobile container ${
+          showMenu ? "show" : "hide"
+        }`}
+      >
         <nav className="header__navbar--mobile">
           <ul>
             {NAV_MOCK.map((item) => (

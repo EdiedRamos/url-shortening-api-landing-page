@@ -1,6 +1,24 @@
 @import "@/Generals/Styles/Colors/colors";
 
 .header {
+  padding-top: 2rem;
+
+  &__controls {
+    &--mobile {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        border: none;
+        background: inherit;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
   &__container {
     &--mobile {
       display: flex;
@@ -54,8 +72,22 @@
   }
 }
 
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
 @media (width >= 992px) {
   .header {
+    &__controls {
+      &--mobile {
+        display: none;
+      }
+    }
+
     &__container {
       &--mobile {
         display: none;
