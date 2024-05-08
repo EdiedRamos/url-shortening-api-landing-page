@@ -18,6 +18,11 @@
 
     li {
       color: $grayish-violet;
+
+      &:hover {
+        cursor: pointer;
+        color: $cyan;
+      }
     }
   }
 }

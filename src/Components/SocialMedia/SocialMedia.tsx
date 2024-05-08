@@ -5,15 +5,15 @@ import {
   InstagramIcon,
   PinterestIcon,
   TwitterIcon,
-} from "@/Resources/Images";
+} from "@/Generals/Icons";
 
 export const SocialMedia = () => {
   return (
     <section className="social-media social-media__container">
-      <img src={FacebookIcon} alt="facebook icon" />
-      <img src={TwitterIcon} alt="twitter icon" />
-      <img src={PinterestIcon} alt="pinterest icon" />
-      <img src={InstagramIcon} alt="instagram icon" />
+      <FacebookIcon className="social-media__icon" />
+      <TwitterIcon className="social-media__icon" />
+      <PinterestIcon className="social-media__icon" />
+      <InstagramIcon className="social-media__icon" />
     </section>
   );
 };

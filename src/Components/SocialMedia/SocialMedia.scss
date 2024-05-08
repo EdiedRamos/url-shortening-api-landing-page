@@ -1,7 +1,21 @@
+@import "@/Generals/Styles/Colors/colors";
+
 .social-media {
   &__container {
     display: flex;
     gap: 16px;
-    height: 24px;
+  }
+
+  &__icon {
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+      color: $cyan;
+    }
+
+    &:nth-child(2) {
+      margin-top: 2px;
+    }
   }
 }
