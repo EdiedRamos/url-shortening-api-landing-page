@@ -1,11 +1,12 @@
 @import "@/Generals/Styles/Colors/colors";
 
 .footer {
+  background-color: $very-dark-violet;
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $very-dark-violet;
     padding: 6rem 0 4rem 0;
   }
 
