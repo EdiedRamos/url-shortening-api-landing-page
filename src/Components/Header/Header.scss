@@ -78,6 +78,10 @@
       flex-direction: column;
       gap: 8px;
       width: 100%;
+
+      button:first-child {
+        background-color: inherit;
+      }
     }
   }
 }
