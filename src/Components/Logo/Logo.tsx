@@ -1,4 +1,4 @@
-import "./Logo.scss";
+import { LogoIcon } from "@/Generals/Icons/LogoIcon";
 
 type Color = "dark" | "light";
 
@@ -8,11 +8,8 @@ interface Logo {
 
 export const Logo = ({ color = "dark" }: Logo) => {
   return (
-    <p
-      className="logo"
+    <LogoIcon
       style={{ color: color === "dark" ? "hsl(260, 8%, 14%)" : "white" }}
-    >
-      Shortly
-    </p>
+    />
   );
 };
