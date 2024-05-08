@@ -1,0 +1,59 @@
+@import "@/Generals/Styles/Colors/colors";
+
+.header {
+  &__container {
+    &--mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 8px;
+      background-color: $dark-violet;
+      padding: 2rem 1rem;
+    }
+
+    &--separator {
+      margin: 1rem 0;
+      border: none;
+      background-color: $grayish-violet;
+      width: 100%;
+      height: 1px;
+    }
+  }
+
+  &__navbar {
+    &--mobile {
+      width: 100%;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        color: white;
+        list-style: none;
+
+        li:hover {
+          cursor: pointer;
+          color: $cyan;
+        }
+      }
+    }
+  }
+
+  &__access {
+    &--mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+  }
+}
+
+@media (width >= 992px) {
+  .header {
+    &__container--mobile {
+      display: none;
+    }
+  }
+}
