@@ -11,6 +11,10 @@
       padding: 2rem 1rem;
     }
 
+    &--desktop {
+      display: none;
+    }
+
     &--separator {
       margin: 1rem 0;
       border: none;
@@ -52,8 +56,13 @@
 
 @media (width >= 992px) {
   .header {
-    &__container--mobile {
-      display: none;
+    &__container {
+      &--mobile {
+        display: none;
+      }
+      &--desktop {
+        display: flex;
+      }
     }
   }
 }
