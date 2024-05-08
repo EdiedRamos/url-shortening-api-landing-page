@@ -1,10 +1,18 @@
-import { BoostLink, Footer, Header, Hero, Statistics } from "@/Components";
+import {
+  BoostLink,
+  Footer,
+  Header,
+  Hero,
+  Shortener,
+  Statistics,
+} from "@/Components";
 
 function App() {
   return (
     <div>
       <Header />
       <Hero />
+      <Shortener />
       <Statistics />
       <BoostLink />
       <Footer />
