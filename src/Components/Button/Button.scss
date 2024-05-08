@@ -1,0 +1,14 @@
+@import "@/Generals/Styles/Colors/colors";
+
+.button {
+  border: none;
+  border-radius: 1rem;
+  background-color: $cyan;
+  padding: 8px 16px 8px 16px;
+  color: white;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}

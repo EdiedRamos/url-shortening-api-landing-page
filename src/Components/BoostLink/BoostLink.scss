@@ -1,0 +1,28 @@
+@import "@/Generals/Styles/Colors/colors";
+
+.boost-link {
+  display: flex;
+  align-items: center;
+  background-image: url("/src/Resources/Images/bg-boost-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $dark-violet;
+  min-height: 200px;
+
+  &__title {
+    color: white;
+    text-align: center;
+  }
+
+  &--center {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (width >= 992px) {
+  .boost-link {
+    background-image: url("/src/Resources/Images/bg-boost-desktop.svg");
+  }
+}
