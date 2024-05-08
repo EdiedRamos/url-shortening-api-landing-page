@@ -1,0 +1,33 @@
+.statistics-details {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 4rem;
+  }
+}
+
+@media (width >= 992px) {
+  .statistics-details {
+    &__container {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  .statistics-detail:nth-child(2) {
+    transform: translateY(2rem);
+  }
+
+  .statistics-detail:nth-child(3) {
+    transform: translateY(4rem);
+  }
+
+  .statistics-detail__container--line:nth-child(3) {
+    &::before {
+      top: 7rem;
+    }
+  }
+}

@@ -4,11 +4,19 @@ interface StatisticsDetail {
   title: string;
   text: string;
   img: string;
+  className?: string;
 }
 
-export const StatisticsDetail = ({ title, text, img }: StatisticsDetail) => {
+export const StatisticsDetail = ({
+  className = "",
+  title,
+  text,
+  img,
+}: StatisticsDetail) => {
   return (
-    <article className="statistics-detail statistics-detail__container">
+    <article
+      className={`statistics-detail statistics-detail__container ${className}`}
+    >
       <div className="statistics-detail__icon">
         <img src={img} alt="icon" />
       </div>

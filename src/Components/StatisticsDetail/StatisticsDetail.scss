@@ -6,6 +6,20 @@
     background-color: white;
     padding: 0 16px 20px 16px;
     max-width: 300px;
+
+    &--line {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $cyan;
+        width: 8px;
+        height: 5rem;
+        content: "";
+      }
+    }
   }
 
   &__title,
@@ -46,6 +60,15 @@
 
 @media (width >= 992px) {
   .statistics-detail {
+    &__container--line {
+      &::before {
+        top: 9rem;
+        left: -1rem;
+        width: 2rem;
+        height: 8px;
+      }
+    }
+
     &__title,
     &__text {
       text-align: start;
