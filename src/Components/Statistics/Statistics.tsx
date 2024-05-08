@@ -1,11 +1,17 @@
+import "./Statistics.scss";
+
 import { StatisticsDetails } from "@/Components";
 
 export const Statistics = () => {
   return (
-    <section>
-      <h2>Advanced Statistics</h2>
-      <p>Track your links are performing across the web with</p>
-      <p>our advanced statistics dashboard.</p>
+    <section className="statistics statistics__container">
+      <h2 className="statistics__title">Advanced Statistics</h2>
+      <p className="statistics__description">
+        Track your links are performing across the web with
+      </p>
+      <p className="statistics__description">
+        our advanced statistics dashboard.
+      </p>
       <StatisticsDetails />
     </section>
   );
