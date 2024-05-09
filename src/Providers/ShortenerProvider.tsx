@@ -10,7 +10,29 @@ export const ShortenerProvider = ({ children }: ShortenerProvider) => {
   const [linkResults, setLinkResults] = useState<LinkResult[]>([]);
 
   const shortenLink = (link: string): void => {
-    console.log("GOT IT: ", link);
+    try {
+      const encodedLink = encodeURIComponent(link);
+
+      fetch("https://cleanuri.com/api/v1/shorten", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ url: link }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setLinkResults((prev) => [
+            ...prev,
+            {
+              id: crypto.randomUUID(),
+              originalLink: link,
+              shortedLink: data.result_url,
+            },
+          ]);
+        });
+      console.log("GOT IT: ", link);
+    } catch {}
   };
 
   const values = { linkResults, shortenLink };
