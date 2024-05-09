@@ -1,0 +1,74 @@
+@import "@/Generals/Styles/Colors/colors";
+
+.shorted-link {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+  }
+
+  &__original {
+    border-bottom: 1px solid $gray;
+    padding: 1rem;
+    width: 100%;
+    color: $very-dark-blue;
+    text-align: center;
+  }
+
+  &__options,
+  &__shorted,
+  &__copy {
+    width: 100%;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  &__shorted {
+    color: $cyan;
+    text-align: center;
+  }
+
+  &__copy {
+    border-radius: 8px;
+  }
+}
+
+@media (width >= 992px) {
+  .shorted-link {
+    &__container {
+      flex-direction: row;
+    }
+
+    &__options {
+      flex-direction: row;
+    }
+
+    &__shorted,
+    &__original {
+      text-align: start;
+    }
+
+    &__options,
+    &__shorted,
+    &__copy {
+      width: auto;
+    }
+
+    &__copy {
+      padding: 8px 2rem;
+    }
+
+    &__original {
+      border: 0;
+    }
+  }
+}
