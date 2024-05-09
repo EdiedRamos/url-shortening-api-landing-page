@@ -4,7 +4,7 @@ import { Button } from "@/Components";
 import { ShortenerController } from "./ShortenerController";
 
 export const Shortener = () => {
-  const { link, handleLink, error } = ShortenerController();
+  const { error, link, handleLink, handleShorten } = ShortenerController();
 
   return (
     <section className="shortener container">
@@ -22,7 +22,9 @@ export const Shortener = () => {
           />
           {error && <p className="shortener__error">Please add a link</p>}
         </div>
-        <Button className="shortener__button">Shorten It!</Button>
+        <Button className="shortener__button" onClick={handleShorten}>
+          Shorten It!
+        </Button>
       </div>
     </section>
   );

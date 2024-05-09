@@ -6,10 +6,20 @@ export const ShortenerController = () => {
   const shortener = useShortener();
 
   const [link, setLink] = useState("");
-  // default is false
-  const [error, setError] = useState(true);
+  const [error, setError] = useState(false);
 
-  const handleLink = (event: React.ChangeEvent<HTMLInputElement>) => {};
+  const handleLink = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setError(false);
+    setLink(event.target.value);
+  };
 
-  return { link, handleLink, error };
+  const handleShorten = () => {
+    if (link.trim().length === 0) {
+      setError(true);
+      return;
+    }
+    shortener.shortenLink(link);
+  };
+
+  return { error, link, handleLink, handleShorten };
 };
