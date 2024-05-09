@@ -3,7 +3,7 @@
 .statistics {
   &__container {
     background-color: $light;
-    padding-top: 3rem;
+    padding-top: 10rem;
     padding-bottom: 3rem;
     min-height: 600px;
   }
@@ -20,5 +20,13 @@
 
   &__description {
     color: $grayish-violet;
+  }
+}
+
+@media (width >= 992px) {
+  .statistics {
+    &__container {
+      padding-bottom: 8rem;
+    }
   }
 }
