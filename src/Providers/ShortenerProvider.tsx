@@ -9,7 +9,11 @@ interface ShortenerProvider {
 export const ShortenerProvider = ({ children }: ShortenerProvider) => {
   const [linkResults, setLinkResults] = useState<LinkResult[]>([]);
 
-  const values = { linkResults };
+  const shortenLink = (link: string): void => {
+    console.log("GOT IT: ", link);
+  };
+
+  const values = { linkResults, shortenLink };
 
   return (
     <ShortenerContext.Provider value={values}>
