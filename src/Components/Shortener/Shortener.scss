@@ -1,0 +1,60 @@
+@import "@/Generals/Styles/Colors/colors";
+
+.shortener {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transform: translateY(74px);
+    border-radius: 8px;
+    background-image: url("/src/Resources/Images/bg-shorten-mobile.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-color: $dark-violet;
+    padding: 1rem;
+    min-height: 100px;
+  }
+
+  &__input,
+  &__button {
+    border-radius: 8px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  &__input {
+    outline: none;
+    border: none;
+    padding-left: 1rem;
+    color: $very-dark-blue;
+
+    &::placeholder {
+      color: $grayish-violet;
+    }
+  }
+
+  &__button {
+    font-weight: bold;
+  }
+}
+
+@media (width >= 992px) {
+  .shortener {
+    &__container {
+      flex-direction: row;
+      align-items: center;
+      transform: translateY(50px);
+      background-image: url("/src/Resources/Images/bg-shorten-desktop.svg");
+      background-size: cover;
+      padding: 3rem;
+    }
+
+    &__input {
+      flex-grow: 1;
+    }
+
+    &__button {
+      width: 200px;
+    }
+  }
+}

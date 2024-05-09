@@ -4,7 +4,7 @@ import { Button } from "@/Components";
 
 export const Shortener = () => {
   return (
-    <section className="shortener">
+    <section className="shortener container">
       <div className="shortener__container">
         <input
           className="shortener__input"
