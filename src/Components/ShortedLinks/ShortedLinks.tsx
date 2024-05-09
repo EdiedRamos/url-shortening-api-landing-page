@@ -1,18 +1,27 @@
 import "./ShortedLinks.scss";
 
-import { Button } from "../Button/Button";
+import { ShortedLink } from "../ShortedLink/ShortedLink";
+
+const MOCK = [
+  {
+    id: "1",
+    originalLink: "https://www.frontendmentor.io",
+    shortedLink: "https://rel.ink/k4Ikzl",
+  },
+  {
+    id: "2",
+    originalLink: "https://www.youtube.com",
+    shortedLink: "https://rel.ink/z5Ilsl",
+  },
+];
 
 export const ShortedLinks = () => {
   return (
     <section className="shorted-links">
       <div className="shorted-links__container container">
-        <div>
-          <p>https://www.frontendmentor.io</p>
-          <div>
-            <p>https://rel.ink/k4Ikzl</p>
-            <Button>Copy</Button>
-          </div>
-        </div>
+        {MOCK.map((info) => (
+          <ShortedLink key={info.id} {...info} />
+        ))}
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ export * from "./Header/Header";
 export * from "./Hero/Hero";
 export * from "./Listing/Listing";
 export * from "./Logo/Logo";
+export * from "./ShortedLink/ShortedLink";
 export * from "./ShortedLinks/ShortedLinks";
 export * from "./Shortener/Shortener";
 export * from "./SocialMedia/SocialMedia";
