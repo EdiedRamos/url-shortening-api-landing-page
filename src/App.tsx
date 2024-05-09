@@ -3,6 +3,7 @@ import {
   Footer,
   Header,
   Hero,
+  ShortedLinks,
   Shortener,
   Statistics,
 } from "@/Components";
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Hero />
       <Shortener />
+      <ShortedLinks />
       <Statistics />
       <BoostLink />
       <Footer />
