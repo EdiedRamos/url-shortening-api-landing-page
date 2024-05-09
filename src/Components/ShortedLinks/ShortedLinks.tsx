@@ -1,6 +1,7 @@
 import "./ShortedLinks.scss";
 
 import { ShortedLink } from "../ShortedLink/ShortedLink";
+import { useShortener } from "@/Hooks";
 
 const MOCK = [
   {
@@ -16,6 +17,7 @@ const MOCK = [
 ];
 
 export const ShortedLinks = () => {
+  const shortener = useShortener();
   return (
     <section className="shorted-links">
       <div className="shorted-links__container container">

@@ -8,13 +8,17 @@ import {
   Statistics,
 } from "@/Components";
 
+import { ShortenerProvider } from "./Providers";
+
 function App() {
   return (
     <div>
       <Header />
       <Hero />
-      <Shortener />
-      <ShortedLinks />
+      <ShortenerProvider>
+        <Shortener />
+        <ShortedLinks />
+      </ShortenerProvider>
       <Statistics />
       <BoostLink />
       <Footer />
