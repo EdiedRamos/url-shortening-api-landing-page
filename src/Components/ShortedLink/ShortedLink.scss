@@ -10,6 +10,12 @@
     background-color: white;
   }
 
+  &__original,
+  &__shorted {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+
   &__original {
     border-bottom: 1px solid $gray;
     padding: 1rem;
@@ -69,6 +75,11 @@
 
     &__original {
       border: 0;
+      max-width: 500px;
+    }
+
+    &__shorted {
+      max-width: 300px;
     }
   }
 }
