@@ -3,14 +3,12 @@ import "./Header.scss";
 import { BurgerIcon, CloseIcon } from "@/Generals/Icons";
 import { Button, Logo } from "@/Components";
 
-import { useState } from "react";
+import { HeaderController } from "./HeaderController";
 
 const NAV_MOCK = ["Features", "Pricing", "Resources"];
 
 export const Header = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const handleShow = () => setShowMenu((prev) => !prev);
+  const { showMenu, handleShow, targetRef } = HeaderController();
 
   return (
     <header className="header">
@@ -42,6 +40,7 @@ export const Header = () => {
         </div>
       </div>
       <div
+        ref={targetRef}
         className={`header__container--mobile container ${
           showMenu ? "show" : "hide"
         }`}
