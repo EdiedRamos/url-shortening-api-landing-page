@@ -1,0 +1,15 @@
+@import "@/Generals/Styles/Colors/colors";
+
+.empty-list {
+  &__container {
+    justify-content: center;
+    border-radius: 8px;
+    background-color: $dark-violet;
+    padding: 12px;
+  }
+
+  &__text {
+    color: $light;
+    text-align: center;
+  }
+}

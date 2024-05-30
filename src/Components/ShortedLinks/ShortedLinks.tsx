@@ -1,6 +1,7 @@
 import "./ShortedLinks.scss";
 
-import { ShortedLink } from "../ShortedLink/ShortedLink";
+import { EmptyList, ShortedLink } from "@/Components";
+
 import { useShortener } from "@/Hooks";
 
 export const ShortedLinks = () => {
@@ -8,9 +9,11 @@ export const ShortedLinks = () => {
   return (
     <section className="shorted-links">
       <div className="shorted-links__container container">
-        {linkResults.map((info) => (
-          <ShortedLink key={info.id} {...info} />
-        ))}
+        {linkResults.length === 0 ? (
+          <EmptyList />
+        ) : (
+          linkResults.map((info) => <ShortedLink key={info.id} {...info} />)
+        )}
       </div>
     </section>
   );

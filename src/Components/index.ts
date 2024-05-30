@@ -12,3 +12,4 @@ export * from "./SocialMedia/SocialMedia";
 export * from "./Statistics/Statistics";
 export * from "./StatisticsDetail/StatisticsDetail";
 export * from "./StatisticsDetails/StatisticsDetails";
+export * from "./EmptyList/EmptyList";
